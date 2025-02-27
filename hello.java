@@ -30,7 +30,7 @@ class Hello {
 
     }
 
-    public static void InsertionSort(int arr[]) {
+    public static void InsertionSorts(int arr[]) {
         for (int i = 1; i < arr.length; i++) {
             int key = arr[i];
             int j = i - 1;
@@ -47,7 +47,7 @@ class Hello {
         int arr[] = { 64, 34, 25, 12, 22, 11, 90 };
         // BubbleSort(arr);
         // SelectionSort(arr);
-        InsertionSort(arr);
+        InsertionSorts(arr);
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");
         }
