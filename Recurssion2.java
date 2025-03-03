@@ -19,16 +19,33 @@ public class Recurssion2 {
 
     }
 
+    public static int first = -1, last = -1;
+
+    public static void firstAndLastIndex(String s, int index, char e) {
+        if (index == s.length()) {
+            System.out.println(first + " " + last);
+            return;
+        }
+        if (s.charAt(index) == e) {
+            if (first == -1) {
+                first = index;
+            }
+            last = index;
+        }
+        firstAndLastIndex(s, index + 1, e);
+    }
+
     public static void main(String[] args) {
         // int n = 3;
         // towerofHanoi(n, "A", "B", "C");
-        String s = "abc";
-        int index = s.length() - 1;
+        String s = "abadafacg";
+        // int index = s.length() - 1;
         // for (int i = s.length() - 1; i >= 0; i--) {
         // System.out.println(s.charAt(i));
 
         // }
 
-        printReverseString(s, index);
+        // printReverseString(s, index);
+        firstAndLastIndex(s, 0, 'a');
     }
 }
