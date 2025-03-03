@@ -35,10 +35,25 @@ public class Recurssion2 {
         firstAndLastIndex(s, index + 1, e);
     }
 
+    public static boolean sortedArray(int arr[], int index) {
+        if (index == arr.length - 1) {
+            return true;
+        }
+
+        if (arr[index] < arr[index + 1]) {
+            return sortedArray(arr, index + 1);
+
+        } else {
+            return false;
+        }
+
+    }
+
     public static void main(String[] args) {
         // int n = 3;
         // towerofHanoi(n, "A", "B", "C");
         String s = "abadafacg";
+        int arr[] = { 1, 2, 3, 4, 5,13, 7, 8, 9 };
         // int index = s.length() - 1;
         // for (int i = s.length() - 1; i >= 0; i--) {
         // System.out.println(s.charAt(i));
@@ -46,6 +61,7 @@ public class Recurssion2 {
         // }
 
         // printReverseString(s, index);
-        firstAndLastIndex(s, 0, 'a');
+        // firstAndLastIndex(s, 0, 'a');
+        System.out.println(sortedArray(arr, 0));
     }
 }
